@@ -1,0 +1,70 @@
+{
+	"position": [
+		0,
+		350
+	],
+	"camPos": [
+		0,
+		0
+	],
+	"animations": [
+		{
+			"animation": "firstDeath",
+			"prefix": "BF Dies pixel",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "deathLoop",
+			"prefix": "Retry Loop",
+			"framerate": 24,
+			"looped": true,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-37,
+				0
+			]
+		},
+		{
+			"animation": "deathConfirm",
+			"prefix": "RETRY CONFIRM",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-37,
+				0
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 6,
+	"singDuration": 4,
+	"antialiasing": false,
+	"flipX": true,
+	"flipY": false,
+	"colors": [
+		50,
+		175,
+		208
+	]
+}

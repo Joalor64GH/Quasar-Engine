@@ -1,0 +1,119 @@
+{
+	"position": [
+		0,
+		200
+	],
+	"camPos": [
+		300,
+		-100
+	],
+	"animations": [
+		{
+			"animation": "singUP",
+			"prefix": "spooky UP NOTE",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				-20,
+				26
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "spooky DOWN note",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-50,
+				-130
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "note sing left",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				130,
+				-10
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "spooky sing right",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-130,
+				-14
+			]
+		},
+		{
+			"animation": "danceLeft",
+			"prefix": "spooky dance idle",
+			"framerate": 12,
+			"indices": [
+				0,
+				2,
+				6
+			],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "danceRight",
+			"prefix": "spooky dance idle",
+			"framerate": 12,
+			"looped": false,
+			"indices": [
+				8,
+				10,
+				12,
+				14
+			],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		}
+	],
+	"danceAnimation": [
+		"danceLeft",
+		"danceRight"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		211,
+		125,
+		0
+	]
+}

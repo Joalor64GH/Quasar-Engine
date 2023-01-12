@@ -1,0 +1,96 @@
+{
+	"position": [
+		0,
+		100
+	],
+	"camPos": [
+		300,
+		-100
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "monster idle",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "monster up note",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-20,
+				94
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "Monster Right note",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-51,
+				30
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "monster down",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-50,
+				-80
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "Monster left note",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-30,
+				20
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		242,
+		253,
+		110
+	]
+}

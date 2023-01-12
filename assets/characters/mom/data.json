@@ -1,0 +1,96 @@
+{
+	"position": [
+		0,
+		0
+	],
+	"camPos": [
+		0,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "Mom Idle",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "Mom Up Pose",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				14,
+				71
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "Mom Pose Left",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				10,
+				-60
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "MOM DOWN POSE",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				20,
+				-160
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "Mom Left Pose",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				250,
+				-23
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		215,
+		90,
+		144
+	]
+}

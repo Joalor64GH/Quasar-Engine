@@ -1,0 +1,148 @@
+{
+	"position": [
+		0,
+		300
+	],
+	"camPos": [
+		600,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "Pico Idle Dance",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "pico Up note0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-29,
+				27
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "Pico Note Right0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				65,
+				9
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "Pico NOTE LEFT0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-68,
+				-7
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "Pico Down Note0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				200,
+				-70
+			]
+		},
+		{
+			"animation": "singUPmiss",
+			"prefix": "pico Up note miss",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-19,
+				67
+			]
+		},
+		{
+			"animation": "singLEFTmiss",
+			"prefix": "Pico Note Right Miss",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				62,
+				64
+			]
+		},
+		{
+			"animation": "singRIGHTmiss",
+			"prefix": "Pico NOTE LEFT miss",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-60,
+				41
+			]
+		},
+		{
+			"animation": "singDOWNmiss",
+			"prefix": "Pico Down Note MISS",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				210,
+				-28
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": true,
+	"flipY": false,
+	"colors": [
+		182,
+		215,
+		84
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"songs": [
+		{
+			"name": "Cocoa",
+			"character": "parents-christmas",
+			"colors": [
+				160,
+				209,
+				255
+			]
+		},
+		{
+			"name": "Eggnog",
+			"character": "parents-christmas",
+			"colors": [
+				160,
+				209,
+				255
+			]
+		},
+		{
+			"name": "Winter-Horrorland",
+			"character": "monster-christmas",
+			"colors": [
+				160,
+				209,
+				255
+			]
+		}
+	],
+	"characters": [
+		"parents-christmas",
+		"bf",
+		"gf"
+	],
+	"name": "Red Show",
+	"locked": false,
+	"unlockAfter": "",
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"hiddenUntilUnlocked": false
+}

@@ -1,0 +1,96 @@
+{
+	"position": [
+		0,
+		0
+	],
+	"camPos": [
+		400,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "Dad idle dance",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "Dad Sing Note UP",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-6,
+				50
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "Dad Sing Note RIGHT",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				27
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "Dad Sing Note DOWN",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				-30
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "Dad Sing Note LEFT",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-10,
+				10
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 6.1,
+	"antialiasing": true,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		175,
+		102,
+		206
+	]
+}

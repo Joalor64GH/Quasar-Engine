@@ -1,0 +1,42 @@
+{
+	"songs": [
+		{
+			"name": "Pico",
+			"character": "pico",
+			"colors": [
+				148,
+				22,
+				83
+			]
+		},
+		{
+			"name": "Philly",
+			"character": "pico",
+			"colors": [
+				148,
+				22,
+				83
+			]
+		},
+		{
+			"name": "Blammed",
+			"character": "pico",
+			"colors": [
+				148,
+				22,
+				83
+			]
+		}
+	],
+	"characters": [
+		"pico",
+		"bf",
+		"gf"
+	],
+	"name": "Pico",
+	"locked": false,
+	"unlockAfter": "",
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"hiddenUntilUnlocked": false
+}

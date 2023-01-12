@@ -1,0 +1,91 @@
+{
+	"position": [
+		0,
+		30
+	],
+	"camPos": [
+		0,
+		0
+	],
+	"animations": [
+		{
+			"animation": "danceLeft",
+			"prefix": "GF Dancing Beat Hair blowing CAR",
+			"framerate": 24,
+			"looped": false,
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "danceRight",
+			"prefix": "GF Dancing Beat Hair blowing CAR",
+			"framerate": 24,
+			"looped": false,
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		}
+	],
+	"danceAnimation": [
+		"danceLeft",
+		"danceRight"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		165,
+		0,
+		77
+	]
+}

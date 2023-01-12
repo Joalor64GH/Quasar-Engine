@@ -1,0 +1,122 @@
+{
+	"position": [
+		0,
+		180
+	],
+	"camPos": [
+		0,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "Tankman Idle Dance",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "Tankman UP note",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				24,
+				56
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "Tankman Right Note",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				100,
+				-14
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "Tankman DOWN note",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				98,
+				-90
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "Tankman Note Left",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-1,
+				-7
+			]
+		},
+		{
+			"animation": "singDOWN-alt",
+			"prefix": "PRETTY GOOD",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				1,
+				16
+			]
+		},
+		{
+			"animation": "singUP-alt",
+			"prefix": "TANKMAN UGH",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-31,
+				4
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": true,
+	"flipY": false,
+	"colors": [
+		224,
+		224,
+		224
+	]
+}

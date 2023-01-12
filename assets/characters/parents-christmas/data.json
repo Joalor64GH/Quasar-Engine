@@ -1,0 +1,148 @@
+{
+	"position": [
+		-500,
+		0
+	],
+	"camPos": [
+		0,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "Parent Christmas Idle",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "Parent Up Note Dad",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-47,
+				24
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "Parent Down Note Dad",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				-31,
+				-29
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "Parent Left Note Dad",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-30,
+				16
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "Parent Right Note Dad",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				-1,
+				-23
+			]
+		},
+		{
+			"animation": "singUP-alt",
+			"prefix": "Parent Up Note Mom",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-47,
+				24
+			]
+		},
+		{
+			"animation": "singDOWN-alt",
+			"prefix": "Parent Down Note Mom",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				-30,
+				-27
+			]
+		},
+		{
+			"animation": "singLEFT-alt",
+			"prefix": "Parent Left Note Mom",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-30,
+				15
+			]
+		},
+		{
+			"animation": "singRIGHT-alt",
+			"prefix": "Parent Right Note Mom",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				-1,
+				-24
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		175,
+		103,
+		205
+	]
+}

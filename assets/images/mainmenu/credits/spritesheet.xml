@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="spritesheet.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="credits basic0000" x="0" y="0" width="454" height="131"/>
+	<SubTexture name="credits basic0001" x="454" y="0" width="454" height="131"/>
+	<SubTexture name="credits basic0002" x="0" y="131" width="454" height="131"/>
+	<SubTexture name="credits white0000" x="0" y="262" width="590" height="170" frameX="-4" frameY="-2" frameWidth="600" frameHeight="175"/>
+	<SubTexture name="credits white0001" x="0" y="432" width="591" height="169" frameX="-3" frameY="-3" frameWidth="600" frameHeight="175"/>
+	<SubTexture name="credits white0002" x="0" y="601" width="600" height="175"/>
+</TextureAtlas>

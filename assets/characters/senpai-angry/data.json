@@ -1,0 +1,96 @@
+{
+	"position": [
+		150,
+		360
+	],
+	"camPos": [
+		300,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "Angry Senpai Idle",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "Angry Senpai UP NOTE",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				5,
+				37
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "Angry Senpai LEFT NOTE",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				40,
+				0
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "Angry Senpai RIGHT NOTE",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "Angry Senpai DOWN NOTE",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				14,
+				0
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 6,
+	"singDuration": 4,
+	"antialiasing": false,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		254,
+		169,
+		111
+	]
+}

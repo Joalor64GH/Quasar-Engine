@@ -1,0 +1,42 @@
+{
+	"songs": [
+		{
+			"name": "Ugh",
+			"character": "tankman",
+			"colors": [
+				246,
+				182,
+				4
+			]
+		},
+		{
+			"name": "Guns",
+			"character": "tankman",
+			"colors": [
+				246,
+				182,
+				4
+			]
+		},
+		{
+			"name": "Stress",
+			"character": "tankman",
+			"colors": [
+				246,
+				182,
+				4
+			]
+		}
+	],
+	"characters": [
+		"tankman",
+		"bf",
+		"gf"
+	],
+	"name": "TANKMAN",
+	"locked": false,
+	"unlockAfter": "",
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"hiddenUntilUnlocked": false
+}

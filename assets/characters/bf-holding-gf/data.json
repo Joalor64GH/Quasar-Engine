@@ -1,0 +1,161 @@
+{
+	"position": [
+		0,
+		350
+	],
+	"camPos": [
+		0,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "BF idle dance",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "BF NOTE UP0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-29,
+				10
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "BF NOTE LEFT0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				12,
+				7
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "BF NOTE RIGHT0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-41,
+				23
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "BF NOTE DOWN0",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-10,
+				-10
+			]
+		},
+		{
+			"animation": "singUPmiss",
+			"prefix": "BF NOTE UP MISS",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-29,
+				10
+			]
+		},
+		{
+			"animation": "singLEFTmiss",
+			"prefix": "BF NOTE LEFT MISS",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				12,
+				7
+			]
+		},
+		{
+			"animation": "singRIGHTmiss",
+			"prefix": "BF NOTE RIGHT MISS",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-41,
+				23
+			]
+		},
+		{
+			"animation": "singDOWNmiss",
+			"prefix": "BF NOTE DOWN MISS",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-10,
+				-10
+			]
+		},
+		{
+			"animation": "bfCatch",
+			"prefix": "BF catches GF",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				0
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": true,
+	"flipY": false,
+	"colors": [
+		50,
+		175,
+		208
+	]
+}

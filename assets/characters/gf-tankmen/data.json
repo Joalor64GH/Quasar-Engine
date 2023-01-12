@@ -1,0 +1,118 @@
+{
+	"position": [
+		-170,
+		-45
+	],
+	"camPos": [
+		0,
+		0
+	],
+	"animations": [
+		{
+			"animation": "sad",
+			"prefix": "GF Crying at Gunpoint",
+			"framerate": 24,
+			"looped": true,
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-2,
+				-2
+			]
+		},
+		{
+			"animation": "danceLeft",
+			"prefix": "GF Dancing at Gunpoint",
+			"framerate": 24,
+			"looped": false,
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				-9
+			]
+		},
+		{
+			"animation": "danceRight",
+			"prefix": "GF Dancing at Gunpoint",
+			"framerate": 24,
+			"looped": false,
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				0,
+				-9
+			]
+		}
+	],
+	"danceAnimation": [
+		"danceLeft",
+		"danceRight"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 1,
+	"singDuration": 4,
+	"antialiasing": true,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		165,
+		0,
+		77
+	]
+}

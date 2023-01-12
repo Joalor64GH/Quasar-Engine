@@ -1,0 +1,96 @@
+{
+	"position": [
+		-150,
+		100
+	],
+	"camPos": [
+		300,
+		0
+	],
+	"animations": [
+		{
+			"animation": "idle",
+			"prefix": "idle spirit_",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				-220,
+				-280
+			]
+		},
+		{
+			"animation": "singUP",
+			"prefix": "up_",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-220,
+				-240
+			]
+		},
+		{
+			"animation": "singRIGHT",
+			"prefix": "right_",
+			"framerate": 24,
+			"indices": [],
+			"flipX": false,
+			"looped": false,
+			"flipY": false,
+			"offset": [
+				-220,
+				-280
+			]
+		},
+		{
+			"animation": "singLEFT",
+			"prefix": "left_",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				-200,
+				-280
+			]
+		},
+		{
+			"animation": "singDOWN",
+			"prefix": "spirit down_",
+			"framerate": 24,
+			"looped": false,
+			"indices": [],
+			"flipX": false,
+			"flipY": false,
+			"offset": [
+				170,
+				110
+			]
+		}
+	],
+	"danceAnimation": [
+		"idle"
+	],
+	"singAnimations": [
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT"
+	],
+	"scale": 6,
+	"singDuration": 4,
+	"antialiasing": false,
+	"flipX": false,
+	"flipY": false,
+	"colors": [
+		254,
+		59,
+		109
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"songs": [
+		{
+			"name": "Senpai",
+			"character": "senpai",
+			"colors": [
+				255,
+				120,
+				191
+			]
+		},
+		{
+			"name": "Roses",
+			"character": "senpai-angry",
+			"colors": [
+				255,
+				120,
+				191
+			]
+		},
+		{
+			"name": "Thorns",
+			"character": "spirit",
+			"colors": [
+				255,
+				120,
+				191
+			]
+		}
+	],
+	"characters": [
+		"senpai",
+		"bf",
+		"gf"
+	],
+	"name": "Hating Simulator ft. Moawling",
+	"locked": false,
+	"unlockAfter": "",
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"hiddenUntilUnlocked": false
+}
