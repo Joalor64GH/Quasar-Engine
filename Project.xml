@@ -3,39 +3,39 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Chain-Saw Engine" file="Chain-Saw Engine" packageName="com.majigsaw.chainsawengine" package="com.majigsaw.chainsawengine" main="Main" version="1.0.0" company="M.A. Jigsaw" preloader="flixel.system.FlxPreloader" />
+	<app title="Friday Night Funkin': Chain-Saw Engine" file="Chain-Saw Engine" package="com.majigsaw.chainsawengine" main="Main" version="1.0.0" company="M.A. Jigsaw" preloader="flixel.system.FlxPreloader" />
 
-	<!--Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2-->
 	<set name="SWF_VERSION" value="11.8" />
 
 	<!-- ____________________________ Window Settings ___________________________ -->
 
-	<!--These window settings apply to all targets-->
+	<!--All targets-->
 	<window width="1280" height="720" fps="60" orientation="landscape" background="#000000" hardware="true" vsync="false" allow-shaders="true" require-shaders="true" />
 
-	<!--HTML5-specific-->
+	<!--HTML5-->
 	<window if="html5" resizable="true" />
 
-	<!--Desktop-specific-->
+	<!--Desktop-->
 	<window if="desktop" fullscreen="false" resizable="true" allow-high-dpi="true" />
 
-	<!--Mobile-specific-->
+	<!--Mobile-->
 	<window if="mobile" fullscreen="true" resizable="false" allow-high-dpi="true" />
 
 	<!-- ______________________________ Engine Defines _____________________________ -->
 
 	<define name="FUTURE_DISCORD_RCP" if="desktop" />
-	<define name="FUTURE_POLYMOD" if="desktop || android" />
+	<define name="FUTURE_POLYMOD" if="desktop" />
 
-	<!-- _____________________________ Path Settings ____________________________ -->
+	<!-- _____________________________ Export Folder ____________________________ -->
 
 	<set name="BUILD_DIR" value="export/debug" if="debug" />
 	<set name="BUILD_DIR" value="export/release" unless="debug" />
 
+	<!-- _____________________________ Path Settings ____________________________ -->
+
 	<source name="source" />
 
 	<assets path="assets" />
-	<assets path="mobile" rename="assets/mobile" if="mobile" /> <!-- to not have the mobile assets in another builds -saw -->
 
 	<assets path="mods" if="FUTURE_POLYMOD" />
 
@@ -49,7 +49,6 @@
 	<haxelib name="polymod" if="FUTURE_POLYMOD" />
 	<haxelib name="hscript" />
 	<haxelib name="hxcpp-debug-server" if="debug" />
-	<haxelib name="extension-androidtools" if="android" />
 
 	<!-- ______________________________ Haxe Defines _____________________________ -->
 
@@ -90,15 +89,10 @@
 	<!--Hscript Power go brrr-->
 	<haxeflag name="--macro" value="macros.Includes.run()" />
 
-	<!-- _________________________________ Android Permissions _______________________________ -->
-
-	<config:android permission="android.permission.ACCESS_NETWORK_STATE" />
-	<config:android permission="android.permission.ACCESS_WIFI_STATE" />
-	<config:android permission="android.permission.INTERNET" />
-
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
+	
 	<icon path="icon.png" />
 
 </project>

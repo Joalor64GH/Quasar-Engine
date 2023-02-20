@@ -265,10 +265,6 @@ class PlayState extends MusicBeatState
 		scoreTxt.cameras = [camHUD];
 		add(scoreTxt);
 
-		#if mobile
-		addMobileControls(false);
-		#end
-
 		if (Assets.exists(Paths.hx('songs/' + Paths.formatName(SONG.song.toLowerCase()) + '/script')))
 			scriptArray.push(new ScriptCore(Paths.hx('songs/' + Paths.formatName(SONG.song.toLowerCase()) + '/script')));
 
@@ -300,10 +296,6 @@ class PlayState extends MusicBeatState
 		var ret:Dynamic = callOnScripts('startCountdown', []);
 		if (ret != ScriptCore.Function_Stop)
 		{
-			#if mobile
-			mobileControls.visible = true;
-			#end
-
 			generateStaticArrows(0);
 			generateStaticArrows(1);
 
@@ -984,10 +976,6 @@ class PlayState extends MusicBeatState
 		seenCutscene = canPause = false;
 		deathCounter = 0;
 		FlxG.sound.music.volume = vocals.volume = 0;
-
-		#if mobile
-		mobileControls.visible = false;
-		#end
 
 		var ret:Dynamic = callOnScripts('endSong', []);
 		if (ret != ScriptCore.Function_Stop)

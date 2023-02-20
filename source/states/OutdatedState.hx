@@ -36,10 +36,6 @@ class OutdatedState extends MusicBeatState
 		txt.screenCenter();
 		add(txt);
 
-		#if mobile
-		addVirtualPad(NONE, A_B);
-		#end
-
 		super.create();
 	}
 

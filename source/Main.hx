@@ -20,8 +20,6 @@ class Main extends Sprite
 	{
 		super();
 
-		SUtil.uncaughtErrorHandler();
-
 		final stageWidth:Int = Lib.current.stage.stageWidth;
 		final stageHeight:Int = Lib.current.stage.stageHeight;
 
@@ -34,9 +32,7 @@ class Main extends Sprite
 			gameHeight = Math.ceil(stageHeight / zoom);
 		}
 
-		SUtil.check();
-
-		game = new FlxGame(gameWidth, gameHeight, TitleState, zoom, 60, 60, true, false);
+		game = new FlxGame(gameWidth, gameHeight, TitleState, #if (flixel < "5.0.0") zoom, #end 60, 60, true, false);
 		addChild(game);
 
 		overlay = new Overlay(10, 10, 0xFFFFFF);

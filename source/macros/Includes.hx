@@ -8,9 +8,6 @@ class Includes
 	public static macro function run():Expr
 	{
 		#if !display
-		#if android
-		Compiler.include('android');
-		#end
 		#if cpp
 		Compiler.include('cpp.RawPointer');
 		Compiler.include('cpp.Pointer');

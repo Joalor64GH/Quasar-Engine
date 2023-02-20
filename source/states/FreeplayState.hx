@@ -127,10 +127,6 @@ class FreeplayState extends MusicBeatState
 		changeSelection();
 		changeDiff();
 
-		#if mobile
-		addVirtualPad(LEFT_FULL, A_B_C);
-		#end
-
 		super.create();
 	}
 
@@ -189,7 +185,7 @@ class FreeplayState extends MusicBeatState
 			PlayState.storyDifficulty = curDifficulty;
 			PlayState.storyWeek = songs[curSelected].week;
 
-			if (FlxG.keys.pressed.SHIFT #if mobile || virtualPad.buttonC.pressed #end)
+			if (FlxG.keys.pressed.SHIFT)
 				MusicBeatState.switchState(new ChartingState());
 			else
 				MusicBeatState.switchState(new PlayState());

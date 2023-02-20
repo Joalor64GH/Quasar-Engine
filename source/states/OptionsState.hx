@@ -16,9 +16,6 @@ class OptionsState extends MusicBeatState
 
 	private final options:Array<String> = [
 		'Preferences',
-		#if mobile
-		'Mobile Controls',
-		#end
 		'Controls',
 		'Exit'
 	];
@@ -52,10 +49,6 @@ class OptionsState extends MusicBeatState
 		}
 
 		changeSelection();
-
-		#if mobile
-		addVirtualPad(UP_DOWN, A);
-		#end
 
 		super.create();
 	}
@@ -115,19 +108,10 @@ class OptionsState extends MusicBeatState
 
 	private function goToState()
 	{
-		#if mobile
-		if (options[curSelected] != 'Exit')
-			removeVirtualPad();
-		#end
-
 		switch (options[curSelected])
 		{
 			case 'Preferences':
 				openSubState(new PreferencesSubState());
-			#if mobile
-			case 'Mobile Controls':
-				openSubState(new mobile.MobileControlsSubState());
-			#end
 			case 'Controls':
 				openSubState(new ControlsSubState());
 			case 'Exit':

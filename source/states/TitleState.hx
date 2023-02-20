@@ -166,12 +166,6 @@ class TitleState extends MusicBeatState
 
 		var pressedEnter:Bool = controls.ACCEPT;
 
-		#if mobile
-		for (touch in FlxG.touches.list)
-			if (touch.justPressed)
-				pressedEnter = true;
-		#end
-
 		if (pressedEnter && !transitioning && skippedIntro)
 		{
 			if (PreferencesData.flashing)

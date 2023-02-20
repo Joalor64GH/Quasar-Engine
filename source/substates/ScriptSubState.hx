@@ -38,14 +38,6 @@ class ScriptSubState extends MusicBeatSubstate
 		super.onCursorEvent(code, target);
 	}
 
-	#if !mobile
-	public override function onDropFile(path:String)
-	{
-		daScript.executeFunc("onDropFile", [path]);
-		super.onDropFile(path);
-	}
-	#end
-
 	public override function onFocus()
 	{
 		daScript.executeFunc("onFocus", []);

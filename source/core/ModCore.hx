@@ -41,7 +41,7 @@ class ModCore
 	public static function loadMods(folders:Array<String>):Void
 	{
 		var loadedModlist:Array<ModMetadata> = Polymod.init({
-			modRoot: SUtil.getPath() + MOD_DIR,
+			modRoot: MOD_DIR,
 			dirs: folders,
 			framework: OPENFL,
 			apiVersion: Lib.application.meta.get('version'),
@@ -71,7 +71,7 @@ class ModCore
 
 		trace('Searching for Mods...');
 
-		for (i in Polymod.scan(SUtil.getPath() + MOD_DIR, '*.*.*', onError))
+		for (i in Polymod.scan(MOD_DIR, '*.*.*', onError))
 		{
 			trackedMods.push(i);
 			if (!FlxG.save.data.disabledMods.contains(i.id))
