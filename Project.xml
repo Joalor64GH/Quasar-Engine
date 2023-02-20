@@ -25,6 +25,7 @@
 
 	<define name="FUTURE_DISCORD_RCP" if="desktop" />
 	<define name="FUTURE_POLYMOD" if="desktop" />
+	<define name="FUTURE_VIDEO" if="windows || web" unless="32bits" />
 
 	<!-- _____________________________ Export Folder ____________________________ -->
 
@@ -39,6 +40,8 @@
 
 	<assets path="mods" if="FUTURE_POLYMOD" />
 
+	<assets path="assets/videos" library="videos" if="FUTURE_VIDEO" />
+
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
@@ -48,6 +51,7 @@
 	<haxelib name="spine" />
 	<haxelib name="polymod" if="FUTURE_POLYMOD" />
 	<haxelib name="hscript" />
+	<haxelib name="hxCodec" if="FUTURE_VIDEO" />
 	<haxelib name="hxcpp-debug-server" if="debug" />
 
 	<!-- ______________________________ Haxe Defines _____________________________ -->

@@ -77,11 +77,6 @@ class BaseOptionsSubState extends MusicBeatSubstate
 		add(description);
 
 		changeSelection();
-
-		#if android
-		addVirtualPad(LEFT_FULL, A_B_C);
-		addPadCamera(false);
-		#end
 	}
 
 	var holdTime:Float = 0;
@@ -196,7 +191,7 @@ class BaseOptionsSubState extends MusicBeatSubstate
 				clearHold();
 		}
 
-		if (controls.RESET #if android || virtualPad.buttonC.justPressed #end)
+		if (controls.RESET)
 		{
 			for (i in 0...options.length)
 			{

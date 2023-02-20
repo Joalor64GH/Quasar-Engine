@@ -24,6 +24,7 @@ jobs:
           haxelib --quiet install polymod
           haxelib --quiet install hscript
           haxelib --quiet install hxcpp-debug-server
+          haxelib --quiet install hxCodec 2.5.1
           haxelib --quiet git spine https://github.com/jeremyfa/spine-hx.git
           haxelib --quiet git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
         shell: cmd
@@ -31,8 +32,8 @@ jobs:
       - name: Setup Lime
         run: |
           haxelib run lime setup -alias -y
-          haxelib set lime 7.9.0
-          haxelib set openfl 9.1.0
+          haxelib set lime 8.0.0
+          haxelib set openfl 9.2.0
           haxelib list
 
       - name: Compile

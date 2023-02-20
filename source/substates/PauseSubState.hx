@@ -114,11 +114,6 @@ class PauseSubState extends MusicBeatSubstate
 		add(grpMenuShit);
 
 		regenMenu(pauseOG);
-
-		#if android
-		addVirtualPad(UP_DOWN, A);
-		addPadCamera(false);
-		#end
 	}
 
 	private function regenMenu(items:Array<String>)

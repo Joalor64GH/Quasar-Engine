@@ -41,7 +41,7 @@ class OutdatedState extends MusicBeatState
 
 	public static function checkForUpdates()
 	{
-		var http:Http = new Http('https://raw.githubusercontent.com/MAJigsaw77/FNF-Chain-Saw-Engine/develop/version.json');
+		var http:Http = new Http('https://raw.githubusercontent.com/Joalor64GH/ChainSaw-Engine-Personalized/develop/version.json');
 		http.onData = function(data:String)
 		{
 			var daRawJson:Dynamic = Json.parse(data);
@@ -63,7 +63,7 @@ class OutdatedState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		if (controls.ACCEPT)
-			FlxG.openURL("https://github.com/MAJigsaw77/FNF-Chain-Saw-Engine");
+			FlxG.openURL("https://github.com/Joalor64GH/ChainSaw-Engine-Personalized");
 		else if (controls.BACK)
 		{
 			leftState = true;

@@ -17,11 +17,22 @@ import flixel.ui.FlxBar;
 import flixel.util.FlxColor;
 import flixel.util.FlxSort;
 import flixel.util.FlxTimer;
-import openfl.utils.Assets;
+import openfl.utils.Assets as OpenFlAssets;
 import parse.Song;
 import parse.Stage;
 import substates.GameOverSubState;
 import substates.PauseSubState;
+
+#if sys
+import sys.FileSystem;
+import sys.io.File;
+#end
+
+#if FUTURE_VIDEO
+#if (hxCodec >= "2.6.1") import hxcodec.VideoHandler as MP4Handler;
+#elseif (hxCodec == "2.6.0") import VideoHandler as MP4Handler;
+#else import vlc.MP4Handler; #end
+#end
 
 using StringTools;
 
@@ -190,7 +201,7 @@ class PlayState extends MusicBeatState
 		boyfriend.x = stageFile.boyfriend[0] + boyfriend.position[0];
 		boyfriend.y = stageFile.boyfriend[1] + boyfriend.position[1];
 
-		if (Assets.exists(Paths.hx('stages/' + SONG.stage + '/script')))
+		if (OpenFlAssets.exists(Paths.hx('stages/' + SONG.stage + '/script')))
 			scriptArray.push(new ScriptCore(Paths.hx('stages/' + SONG.stage + '/script')));
 
 		add(gf);
@@ -219,7 +230,7 @@ class PlayState extends MusicBeatState
 
 		generateSong();
 
-		for (script in Assets.list(TEXT).filter(text -> text.contains('assets/scripts')))
+		for (script in OpenFlAssets.list(TEXT).filter(text -> text.contains('assets/scripts')))
 			if (script.endsWith('.hx'))
 				scriptArray.push(new ScriptCore(script));
 
@@ -265,7 +276,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.cameras = [camHUD];
 		add(scoreTxt);
 
-		if (Assets.exists(Paths.hx('songs/' + Paths.formatName(SONG.song.toLowerCase()) + '/script')))
+		if (OpenFlAssets.exists(Paths.hx('songs/' + Paths.formatName(SONG.song.toLowerCase()) + '/script')))
 			scriptArray.push(new ScriptCore(Paths.hx('songs/' + Paths.formatName(SONG.song.toLowerCase()) + '/script')));
 
 		startingSong = true;
@@ -317,6 +328,45 @@ class PlayState extends MusicBeatState
 			Conductor.songPosition = -Conductor.crochet * 5;
 			doIntro(Conductor.crochet / 1000, true);
 		}
+	}
+
+	public function startVideo(name:String)
+	{
+		#if FUTURE_VIDEO
+		inCutscene = true;
+
+		var filepath:String = Paths.video(name);
+		#if sys
+		if(!FileSystem.exists(filepath))
+		#else
+		if(!OpenFlAssets.exists(filepath))
+		#end
+		{
+			FlxG.log.warn('Couldnt find video file: ' + name);
+			startAndEnd();
+			return;
+		}
+
+		var video:MP4Handler = new MP4Handler();
+		video.playVideo(filepath);
+		video.finishCallback = function()
+		{
+			startAndEnd();
+			return;
+		}
+		#else
+		FlxG.log.warn('Platform not supported!');
+		startAndEnd();
+		return;
+		#end
+	}
+
+	function startAndEnd()
+	{
+		if(endingSong)
+			endSong();
+		else
+			startCountdown();
 	}
 
 	private function doIntro(startTime:Float, ?doDance:Bool = false):Void
@@ -663,7 +713,7 @@ class PlayState extends MusicBeatState
 				+ divider + Rank.accuracyToGrade(accuracy);
 		scoreTxt.screenCenter(X);
 
-		if (controls.PAUSE #if android || FlxG.android.justReleased.BACK #end && startedCountdown && canPause)
+		if (controls.PAUSE && startedCountdown && canPause)
 			pause();
 
 		if (FlxG.keys.justPressed.SEVEN)

@@ -103,6 +103,9 @@ class Paths
 	inline static public function vert(key:String):String
 		return 'assets/$key.vert';
 
+	inline static public function video(key:String):String
+		return 'assets/$key.mp4';
+
 	inline static public function font(key:String):String
 		return 'assets/fonts/$key';
 
