@@ -13,7 +13,7 @@ jobs:
         with:
           haxe-version: 4.2.5
 
-      - name: Install Haxelibs
+      - name: Install Haxelib
         run: |
           haxelib --quiet install lime
           haxelib --quiet install openfl
@@ -21,7 +21,7 @@ jobs:
           haxelib --quiet --never run lime setup
           haxelib --quiet install flixel-ui
           haxelib --quiet install flixel-addons
-          haxelib --quiet install polymod 1.6.0
+          haxelib --quiet git polymod-joalor64 https://github.com/Joalor64GH/polymod-joalor64
           haxelib --quiet install hscript
           haxelib --quiet install hxcpp-debug-server
           haxelib --quiet install hxCodec 2.5.1

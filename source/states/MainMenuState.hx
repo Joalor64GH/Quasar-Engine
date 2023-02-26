@@ -137,47 +137,42 @@ class MainMenuState extends MusicBeatState
 			}
 			else if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'credits')
-					Main.toast.create('Alert!', 0xFFFF0000, 'Not Maded Menu!');
-				else
+				selectedSomething = true;
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+
+				if (PreferencesData.flashing)
+					FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+
+				menuItems.forEach(function(spr:FlxSprite)
 				{
-					selectedSomething = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
-
-					if (PreferencesData.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-
-					menuItems.forEach(function(spr:FlxSprite)
+					if (curSelected != spr.ID)
 					{
-						if (curSelected != spr.ID)
+						FlxTween.tween(spr, {alpha: 0}, 1.3, {
+							ease: FlxEase.quadOut,
+							onComplete: function(twn:FlxTween)
+							{
+								spr.kill();
+							}
+						});
+					}
+					else
+					{
+						if (PreferencesData.flashing)
 						{
-							FlxTween.tween(spr, {alpha: 0}, 1.3, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									spr.kill();
-								}
+							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
+							{
+								goToState();
 							});
 						}
 						else
 						{
-							if (PreferencesData.flashing)
+							new FlxTimer().start(1, function(tmr:FlxTimer)
 							{
-								FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
-								{
-									goToState();
-								});
-							}
-							else
-							{
-								new FlxTimer().start(1, function(tmr:FlxTimer)
-								{
-									goToState();
-								});
-							}
+								goToState();
+							});
 						}
-					});
-				}
+					}
+				});
 			}
 		}
 
@@ -206,6 +201,8 @@ class MainMenuState extends MusicBeatState
 				else
 					Main.toast.create('No Mods Installed!', 0xFFFFFF00, 'Please add mods to be able to access the menu!');
 			#end
+			case 'credits':
+				MusicBeatState.switchState(new CreditsState());
 			case 'options':
 				MusicBeatState.switchState(new OptionsState());
 		}

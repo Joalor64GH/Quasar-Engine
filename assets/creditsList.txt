@@ -1,0 +1,4 @@
+Joalor64 YT:Main Programmer and Polymod Fork
+PolybiusProxy:MP4 Video Support
+MAJigsaw77:Original Programmer of ChainSaw Engine
+Ninjamuffin99:Base Game

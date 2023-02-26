@@ -18,10 +18,19 @@ class ModCore
 
 	#if FUTURE_POLYMOD
 	private static final extensions:Map<String, PolymodAssetType> = [
-		'mp3' => AUDIO_GENERIC, 'ogg' => AUDIO_GENERIC, 'wav' => AUDIO_GENERIC, 'jpg' => IMAGE, 'png' => IMAGE, 'gif' => IMAGE, 'tga' => IMAGE,
-		'bmp' => IMAGE, 'tif' => IMAGE, 'tiff' => IMAGE, 'xml' => TEXT, 'json' => TEXT, 'csv' => TEXT, 'tsv' => TEXT, 'mpf' => TEXT, 'tsx' => TEXT,
-		'tmx' => TEXT, 'vdf' => TEXT, 'frag' => TEXT, 'vert' => TEXT, 'txt' => TEXT, 'hx' => TEXT, 'ttf' => FONT, 'otf' => FONT, 'webm' => VIDEO,
-		'mp4' => VIDEO, 'mov' => VIDEO, 'avi' => VIDEO, 'mkv' => VIDEO
+		'mp3' => AUDIO_GENERIC, 
+		'ogg' => AUDIO_GENERIC, 
+		'wav' => AUDIO_GENERIC, 
+		'png' => IMAGE,
+		'xml' => TEXT, 
+		'json' => TEXT,
+		'frag' => TEXT, 
+		'vert' => TEXT, 
+		'txt' => TEXT, 
+		'hx' => TEXT, 
+		'ttf' => FONT, 
+		'otf' => FONT, 
+		'mp4' => VIDEO
 	];
 
 	public static var trackedMods:Array<ModMetadata> = [];
