@@ -84,7 +84,7 @@ class ScriptCore implements IFlxDestroyable
 		setVariable('ScriptState', ScriptState);
 		setVariable('ScriptSubState', ScriptSubState);
 
-		setVariable('game', PlayState.instance);
+		setVariable('game', states.PlayState.instance);
 
 		if (execute)
 			this.execute(file);

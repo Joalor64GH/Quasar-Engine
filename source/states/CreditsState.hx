@@ -109,9 +109,6 @@ class CreditsState extends MusicBeatState
 	{
 		super.update(elapsed);
 
-		if (FlxG.keys.pressed.SHIFT)
-			shiftMult = 3;
-
 		if (controls.UI_UP_P)
 		{
 			FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
