@@ -38,7 +38,8 @@ class ControlsSubState extends MusicBeatSubstate
 		['VOLUME'], 
 		['Mute', 'volume_mute'], 
 		['Up', 'volume_up'], 
-		['Down', 'volume_down']];
+		['Down', 'volume_down']
+	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var grpInputs:Array<AttachedAlphabet> = [];

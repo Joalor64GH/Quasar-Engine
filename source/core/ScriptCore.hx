@@ -1,6 +1,5 @@
 package core;
 
-import flixel.util.FlxDestroyUtil.IFlxDestroyable;
 import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
@@ -15,7 +14,7 @@ using StringTools;
  * Class based originally from Wednesdays-Infidelty Mod.
  * Credits: lunarcleint.
  */
-class ScriptCore implements IFlxDestroyable
+class ScriptCore extends FlxBasic
 {
 	public static var Function_Stop:Dynamic = 1;
 	public static var Function_Continue:Dynamic = 0;
@@ -23,10 +22,10 @@ class ScriptCore implements IFlxDestroyable
 	private var parser:Parser;
 	private var interp:Interp;
 
-	public var daFile:String;
-
 	public function new(file:String, ?execute:Bool = true)
 	{
+		super();
+
 		parser = new Parser();
 		parser.allowJSON = parser.allowTypes = parser.allowMetadata = true;
 
@@ -84,12 +83,8 @@ class ScriptCore implements IFlxDestroyable
 		setVariable('ScriptState', ScriptState);
 		setVariable('ScriptSubState', ScriptSubState);
 
-		setVariable('game', states.PlayState.instance);
-
 		if (execute)
 			this.execute(file);
-
-		daFile = file;
 	}
 
 	public function execute(file:String, ?executeCreate:Bool = true):Void
@@ -181,8 +176,9 @@ class ScriptCore implements IFlxDestroyable
 		return null;
 	}
 
-	public function destroy()
+	override function destroy()
 	{
+		super.destroy();
 		parser = null;
 		interp = null;
 	}

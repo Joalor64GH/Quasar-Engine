@@ -101,8 +101,8 @@ class MainMenuState extends MusicBeatState
 			- 23, 0,
 			"Friday Night Funkin': "
 			+ gameVer
-			+ ' - '
-			+ 'Chain-Saw Engine: '
+			+ "\n"
+			+ 'ChainSaw Engine: '
 			+ Application.current.meta.get('version')
 			+ nightly, 12);
 		versionShit.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);

@@ -30,7 +30,7 @@ class OutdatedState extends MusicBeatState
 			+ "What's new:\n"
 			+ daJson.description
 			+ "\n"
-			+ "Press Enter to go to the github page, or Escape to ignore this!",
+			+ "Press ENTER to go to the GitHub page, or ESC to ignore this!",
 			32);
 		txt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
