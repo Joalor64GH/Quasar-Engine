@@ -13,11 +13,12 @@ class CoolUtil
 	public static inline function difficultyString(curDifficulty:Int):String
 		return difficultyArray[curDifficulty][0];
 
-	public static function coolTextFile(path:String):Array<String>
-	{
-		if (Assets.exists(path))
-			return [for (i in Assets.getText(path).trim().split('\n')) i.trim()];
-		return [];
+	inline public static function coolTextFile(path:String):Array<String> {
+		return (Assets.exists(path)) ? [for (i in Assets.getText(path).trim().split('\n')) i.trim()] : [];
+	}
+
+	public static inline function coolerTextFile(path:String, daString:String = ''):String{
+		return Assets.exists(path) ? daString = Assets.getText(path).trim() : '';
 	}
 
 	public inline static function numberArray(max:Int, ?min = 0):Array<Int>

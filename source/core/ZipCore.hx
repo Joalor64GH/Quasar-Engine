@@ -31,7 +31,7 @@ using StringTools;
 
 class ZipCore
 {
-	public static var bannedNames:Array<String> = [".git", ".gitignore", ".github", ".vscode", ".gitattributes", "readme.txt"];
+	public static var bannedNames:Array<String> = [".git", "readme.txt"];
 
 	/**
 	 * [Description] Uncompresses `zip` into the `destFolder` folder
