@@ -8,6 +8,8 @@ import haxe.Http;
 import haxe.Json;
 import openfl.Lib;
 
+import states.*;
+
 class OutdatedState extends MusicBeatState
 {
 	public static var leftState:Bool = false;

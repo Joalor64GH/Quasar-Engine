@@ -31,6 +31,8 @@ import openfl.net.FileReference;
 import openfl.utils.ByteArray;
 import parse.Song;
 
+import states.*;
+
 using StringTools;
 
 class ChartingState extends MusicBeatState

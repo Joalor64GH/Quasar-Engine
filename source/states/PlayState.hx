@@ -18,10 +18,10 @@ import flixel.util.FlxColor;
 import flixel.util.FlxSort;
 import flixel.util.FlxTimer;
 import openfl.utils.Assets as OpenFlAssets;
-import parse.Song;
-import parse.Stage;
-import substates.GameOverSubState;
-import substates.PauseSubState;
+
+import parse.*;
+import states.*;
+import substates.*;
 
 #if sys
 import sys.FileSystem;
@@ -104,7 +104,6 @@ class PlayState extends MusicBeatState
 	private final iconOffset:Int = 26;
 
 	#if FUTURE_DISCORD_RCP
-	// Discord RPC variables
 	private var detailsText:String = '';
 	#end
 
@@ -835,10 +834,6 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	/**
-	 * John Kramer: GameOver!
-	 * Adam: Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!
-	 */
 	private function gameOver()
 	{
 		var ret:Dynamic = callOnScripts('gameOver', []);

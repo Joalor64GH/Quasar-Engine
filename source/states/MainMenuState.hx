@@ -16,6 +16,8 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 
+import states.*;
+
 class MainMenuState extends MusicBeatState
 {
 	public static var nightly:String = #if nightly '-nightly' #else '' #end;
@@ -34,6 +36,9 @@ class MainMenuState extends MusicBeatState
 	private var curSelected:Int = 0;
 	private var camFollow:FlxObject;
 	private var magenta:FlxSprite;
+
+	public static var firstStart:Bool = true;
+	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
 	{
@@ -89,10 +94,19 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.screenCenter(X);
-			menuItem.scrollFactor.set();
+			menuItem.scrollFactor.set(0, 1);
 			menuItem.antialiasing = PreferencesData.antialiasing;
 			menuItem.ID = i;
 			menuItems.add(menuItem);
+			if (firstStart)
+				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+					{
+						finishedFunnyMove = true; 
+						changeItem();
+					}
+				});
+			else
+				menuItem.y = 60 + (i * 160);
 		}
 
 		FlxG.camera.follow(camFollow, null, 0.60);

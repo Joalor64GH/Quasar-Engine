@@ -18,6 +18,8 @@ import sys.io.File;
 import sys.FileSystem;
 #end
 
+import states.*;
+
 using StringTools;
 
 class CreditsState extends MusicBeatState
@@ -128,7 +130,7 @@ class CreditsState extends MusicBeatState
 		}
 
 		if (controls.BACK)
-			FlxG.switchState(new states.MainMenuState());
+			FlxG.switchState(new MainMenuState());
 	}
 
 	function changeSelection(change:Int = 0)

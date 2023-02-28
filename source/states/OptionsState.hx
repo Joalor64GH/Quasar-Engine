@@ -7,8 +7,9 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
-import substates.ControlsSubState;
-import substates.PreferencesSubState;
+
+import states.*;
+import substates.*;
 
 class OptionsState extends MusicBeatState
 {

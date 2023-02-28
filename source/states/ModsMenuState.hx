@@ -12,6 +12,8 @@ import flixel.util.FlxColor;
 import haxe.io.Bytes;
 import openfl.display.BitmapData;
 
+import states.*;
+
 class ModsMenuState extends MusicBeatState
 {
 	public static var mustResetMusic:Bool = false;

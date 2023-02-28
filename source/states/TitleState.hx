@@ -10,6 +10,8 @@ import flixel.util.FlxTimer;
 import openfl.Lib;
 import openfl.utils.Assets;
 
+import states.*;
+
 class TitleState extends MusicBeatState
 {
 	private static var initialized:Bool = false;

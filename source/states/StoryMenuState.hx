@@ -8,9 +8,9 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import parse.Song;
-import parse.Week;
-import states.PlayState;
+
+import parse.*;
+import states.*;
 
 class StoryMenuState extends MusicBeatState
 {
