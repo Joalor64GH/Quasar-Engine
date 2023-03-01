@@ -21,6 +21,7 @@ class TitleState extends MusicBeatState
 	private var textGroup:FlxGroup;
 	private var ngSpr:FlxSprite;
 	private var curWacky:Array<String> = [];
+	private var gameName:Array<String> = [];
 	private var wackyImage:FlxSprite;
 
 	override public function create():Void
@@ -40,6 +41,7 @@ class TitleState extends MusicBeatState
 			OutdatedState.checkForUpdates();
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
+		gameName = getName();
 
 		#if FUTURE_DISCORD_RCP
 		DiscordClient.initialize();
@@ -155,6 +157,14 @@ class TitleState extends MusicBeatState
 		return swagGoodArray;
 	}
 
+	private function getName():Array<String>
+	{
+		var fullText:String = Assets.getText(Paths.txt('gameName'));
+
+		var firstArray:Array<String> = fullText.split('--');
+		return firstArray;
+	}
+
 	private var transitioning:Bool = false;
 
 	override function update(elapsed:Float)
@@ -223,6 +233,7 @@ class TitleState extends MusicBeatState
 	}
 
 	var lastBeat:Int = 0;
+	
 	override function beatHit()
 	{
 		super.beatHit();
@@ -242,7 +253,8 @@ class TitleState extends MusicBeatState
 				switch (i + 1)
 				{
 					case 1:
-						createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
+						var teamStuff = Assets.getText(Paths.txt('team')).split('--');
+						createCoolText(teamStuff);
 					case 3:
 						addMoreText('present');
 					case 4:
@@ -262,11 +274,11 @@ class TitleState extends MusicBeatState
 					case 12:
 						deleteCoolText();
 					case 13:
-						addMoreText('Friday');
+						addMoreText(gameName[0]);
 					case 14:
-						addMoreText('Night');
+						addMoreText(gameName[1]);
 					case 15:
-						addMoreText('Funkin');
+						addMoreText(gameName[2]);
 					case 16:
 						skipIntro();
 				}

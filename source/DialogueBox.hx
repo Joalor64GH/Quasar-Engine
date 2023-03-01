@@ -9,7 +9,7 @@ import flixel.input.FlxKeyManager;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import states.PlayState;
+import states.*;
 
 using StringTools;
 

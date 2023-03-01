@@ -5,13 +5,17 @@ import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.media.Sound;
 import openfl.utils.Assets;
+
 import GithubShit;
 
 using StringTools;
 
 class Paths
 {
-	public static final SOUND_EXT = ['ogg', 'wav'];
+	public static final SOUND_EXT = [
+		'ogg', 
+		'wav'
+	];
 
 	public static var currentTrackedAssets:Map<String, FlxGraphic> = [];
 	public static var currentTrackedSounds:Map<String, Sound> = [];
