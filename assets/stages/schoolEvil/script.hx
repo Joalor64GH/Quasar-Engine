@@ -24,7 +24,7 @@ function create()
 
 	PlayState.instance.add(new FlxTrail(PlayState.instance.dad, null, 4, 24, 0.3, 0.069));
 
-	if (PreferencesData.shaders)
+		if (PreferencesData.shaders)
 	{
 		shader = new FlxRuntimeShader(Paths.frag('shaders/vcr-distortion'), null);
 		shader.setFloat('iTime', 0);
