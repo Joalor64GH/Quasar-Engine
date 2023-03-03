@@ -18,6 +18,7 @@ class PreferencesData
 	public static var checkForUpdates:Bool = true;
 	public static var antialiasing:Bool = true;
 	public static var flashing:Bool = true;
+	public static var shaders:Bool = true;
 
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		'note_left' => [A, LEFT],
@@ -118,6 +119,9 @@ class PreferencesData
 
 		if (FlxG.save.data.flashing != null)
 			flashing = FlxG.save.data.flashing;
+
+		if (FlxG.save.data.shaders != null)
+			shaders = FlxG.save.data.shaders;
 
 		if (FlxG.save.data.volume != null)
 			FlxG.sound.volume = FlxG.save.data.volume;

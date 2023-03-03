@@ -44,6 +44,7 @@ class PreferencesSubState extends BaseOptionsSubState
 		addOption(new Option('Check For Updates', 'If disabled, stops checking for updates.', 'checkForUpdates', 'bool', true));
 		addOption(new Option('Antialiasing', 'If disabled, disables antialiasing, increases perfomance \nat the cost of graphics quality.', 'antialiasing', 'bool', true));
 		addOption(new Option('Flashing', 'If disabled, disables all flashing from the engine.', 'flashing', 'bool', true));
+		addOption(new Option('Shaders', 'If disabled, turns off all shaders from the engine.', 'shaders', 'bool', true));
 
 		super();
 	}
