@@ -50,7 +50,7 @@
 	<haxelib name="discord_rpc" if="FUTURE_DISCORD_RCP" />
 	<haxelib name="spine" />
 	<haxelib name="polymod-joalor64" if="FUTURE_POLYMOD" />
-	<haxelib name="hscript" />
+	<haxelib name="hscript-yoshiengine" rename="hscript"/>
 	<haxelib name="hxCodec" if="FUTURE_VIDEO" />
 	<haxelib name="hxcpp-debug-server" if="debug" />
 
