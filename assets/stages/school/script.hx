@@ -79,7 +79,7 @@ function create()
 	bgGirls.updateHitbox();
 	PlayState.instance.add(bgGirls);
 
-    if (PreferencesData.shaders)
+    	if (PreferencesData.shaders)
 	{
 		shader = new FlxRuntimeShader(Paths.frag('shaders/vcr-distortion'), null);
 		shader.setFloat('iTime', 0);
