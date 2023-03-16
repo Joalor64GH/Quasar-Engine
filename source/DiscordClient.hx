@@ -37,7 +37,7 @@ class DiscordClient
 			details: "In the Menus",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "ChainSaw Engine"
+			largeImageText: "Quasar Engine"
 		});
 	}
 
@@ -68,7 +68,7 @@ class DiscordClient
 			details: details,
 			state: state,
 			largeImageKey: 'icon',
-			largeImageText: "ChainSaw Engine",
+			largeImageText: "Quasar Engine",
 			smallImageKey: smallImageKey,
 			startTimestamp: Std.int(startTimestamp / 1000),
 			endTimestamp: Std.int(endTimestamp / 1000)

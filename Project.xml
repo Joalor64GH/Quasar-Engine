@@ -3,7 +3,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Chain-Saw Engine" file="ChainSaw Engine" package="com.majigsaw.chainsawengine" main="Main" version="1.0.0" company="Joalor64" preloader="flixel.system.FlxPreloader" />
+	<app title="Friday Night Funkin': Quasar Engine" file="Quasar Engine" package="com.joalor64gh.quasar" main="Main" version="1.0.0" company="Joalor64" preloader="flixel.system.FlxPreloader" />
 
 	<set name="SWF_VERSION" value="11.8" />
 

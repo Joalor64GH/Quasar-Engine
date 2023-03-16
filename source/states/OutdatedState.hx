@@ -43,7 +43,7 @@ class OutdatedState extends MusicBeatState
 
 	public static function checkForUpdates()
 	{
-		var http:Http = new Http('https://raw.githubusercontent.com/Joalor64GH/ChainSaw-Engine-Personalized/develop/version.json');
+		var http:Http = new Http('https://raw.githubusercontent.com/Joalor64GH/Quasar-Engine/develop/version.json');
 		http.onData = function(data:String)
 		{
 			var daRawJson:Dynamic = Json.parse(data);
