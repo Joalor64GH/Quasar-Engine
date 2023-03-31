@@ -2,3 +2,4 @@ export/
 .vscode/
 source/APIStuff.hx
 !mods/introMod/
+.DS_STORE
