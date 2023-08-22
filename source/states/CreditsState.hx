@@ -130,7 +130,7 @@ class CreditsState extends MusicBeatState
 		}
 
 		if (controls.BACK)
-			FlxG.switchState(new MainMenuState());
+			MusicBeatState.switchState(new MainMenuState());
 	}
 
 	function changeSelection(change:Int = 0)

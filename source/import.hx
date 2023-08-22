@@ -17,7 +17,7 @@ import HighScore;
 import Alphabet;
 import CoolUtil;
 import Controls;
-import Paths;
+#if !macro import Paths; #end
 
 using CoolUtil;
 using StringTools;

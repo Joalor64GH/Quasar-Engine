@@ -36,7 +36,6 @@ class GameOverSubState extends MusicBeatSubstate
 		add(camFollow);
 
 		FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
-		Conductor.changeBPM(Std.parseInt(CoolUtil.coolerTextFile(Paths.txt('gameoverBPM'))));
 
 		FlxG.camera.scroll.set();
 		FlxG.camera.target = null;

@@ -53,7 +53,7 @@
 	<haxelib name="flixel-ui" />
 	<haxelib name="flixel-addons" />
 	<haxelib name="hxCodec" if="FUTURE_VIDEO" />
-	<haxelib name="hscript-yoshiengine" rename="hscript"/>
+	<haxelib name="hscript"/>
 	<haxelib name="discord_rpc" if="FUTURE_DISCORD_RCP" />
 	<haxelib name="polymod-joalor64" if="FUTURE_POLYMOD" />
 	<haxelib name="hxcpp-debug-server" if="desktop debug" />
@@ -67,6 +67,10 @@
 
 	<!--Disable the Flixel core focus lost screen-->
 	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
+
+	<!-- hxCodec Debug Stuff -->
+	<haxedef name="HXC_DEBUG_TRACE" if="debug" />
+	<haxedef name="HXC_LIBVLC_LOGGING" if="FUTURE_VIDEO debug" />
 
 	<section unless="debug">
 		<!--Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
@@ -100,6 +104,9 @@
 
 	<!--Hscript Power go brrr-->
 	<haxeflag name="--macro" value="macros.Includes.run()" />
+
+	<haxeflag name="--macro" value="allowPackage('flash')" />
+	<haxeflag name="--macro" value="include('my.pack')" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 
