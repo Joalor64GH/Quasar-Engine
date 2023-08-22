@@ -9,11 +9,6 @@ import flixel.FlxSubState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.math.FlxRect;
-#if (flixel >= "5.3.0")
-import flixel.sound.FlxSound;
-#else
-import flixel.system.FlxSound;
-#end
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -22,6 +17,12 @@ import flixel.util.FlxColor;
 import flixel.util.FlxSort;
 import flixel.util.FlxTimer;
 import openfl.utils.Assets as OpenFlAssets;
+
+#if (flixel >= "5.3.0")
+import flixel.sound.FlxSound;
+#else
+import flixel.system.FlxSound;
+#end
 
 import parse.*;
 import states.*;
@@ -33,7 +34,8 @@ import sys.io.File;
 #end
 
 #if FUTURE_VIDEO
-#if (hxCodec >= "2.6.1") import hxcodec.VideoHandler as MP4Handler;
+#if (hxCodec >= "3.0.0") import hxcodec.flixel.FlxVideo as MP4Handler;
+#elseif (hxCodec >= "2.6.1") import hxcodec.VideoHandler as MP4Handler;
 #elseif (hxCodec == "2.6.0") import VideoHandler as MP4Handler;
 #else import vlc.MP4Handler; #end
 #end
@@ -351,12 +353,24 @@ class PlayState extends MusicBeatState
 		}
 
 		var video:MP4Handler = new MP4Handler();
+		#if (hxCodec >= "3.0.0")
+		// Recent versions
+		video.play(filepath);
+		video.onEndReached.add(function()
+		{
+			video.dispose();
+			startAndEnd();
+			return;
+		}, true);
+		#else
+		// Older versions
 		video.playVideo(filepath);
 		video.finishCallback = function()
 		{
 			startAndEnd();
 			return;
 		}
+		#end
 		#else
 		FlxG.log.warn('Platform not supported!');
 		startAndEnd();
