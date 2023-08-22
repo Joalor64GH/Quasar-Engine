@@ -105,9 +105,6 @@
 	<!--Hscript Power go brrr-->
 	<haxeflag name="--macro" value="macros.Includes.run()" />
 
-	<haxeflag name="--macro" value="allowPackage('flash')" />
-	<haxeflag name="--macro" value="include('my.pack')" />
-
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
