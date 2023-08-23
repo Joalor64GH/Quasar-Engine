@@ -1,10 +1,3 @@
-import flixel.tweens.FlxTween;
-import flixel.tweens.FlxEase;
-import flixel.util.FlxColor;
-import flixel.math.FlxMath;
-import flixel.FlxSprite;
-import flixel.FlxG;
-
 import Conductor;
 import DiscordClient;
 import PlayerSettings;
@@ -21,8 +14,3 @@ import Paths;
 
 using CoolUtil;
 using StringTools;
-
-#if sys
-import sys.io.File;
-import sys.FileSystem;
-#end
