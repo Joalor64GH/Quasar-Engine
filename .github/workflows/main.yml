@@ -17,7 +17,7 @@ jobs:
         run: |
           haxelib --quiet install lime
           haxelib --quiet install openfl
-          haxelib --quiet --never install flixel 5.2.2
+          haxelib --quiet --never install flixel 5.5.0
           haxelib --quiet --never run lime setup
           haxelib --quiet install flixel-ui
           haxelib --quiet git flixel-addons https://github.com/HaxeFlixel/flixel-addons.git dev
