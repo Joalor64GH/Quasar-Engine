@@ -42,10 +42,8 @@ class MusicBeatSubstate extends FlxUISubState
 			bpm: 0
 		}
 		for (i in 0...Conductor.bpmChangeMap.length)
-		{
 			if (Conductor.songPosition > Conductor.bpmChangeMap[i].songTime)
 				lastChange = Conductor.bpmChangeMap[i];
-		}
 
 		curStep = lastChange.stepTime + Math.floor((Conductor.songPosition - lastChange.songTime) / Conductor.stepCrochet);
 	}
@@ -56,11 +54,5 @@ class MusicBeatSubstate extends FlxUISubState
 			beatHit();
 	}
 
-	public function beatHit():Void
-	{
-	}
-
-	public function onDropFile(path:String)
-	{
-	}
+	public function beatHit():Void {}
 }

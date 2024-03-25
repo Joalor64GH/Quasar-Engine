@@ -1,13 +1,11 @@
 package states;
 
 import Controls.KeyboardScheme;
-import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
-import flixel.input.gamepad.FlxGamepad;
 import flixel.addons.text.FlxTypeText;
 import flixel.text.FlxText;
 import flixel.tweens.FlxTween;

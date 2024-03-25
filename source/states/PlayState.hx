@@ -18,11 +18,7 @@ import flixel.util.FlxSort;
 import flixel.util.FlxTimer;
 import openfl.utils.Assets as OpenFlAssets;
 
-#if (flixel >= "5.3.0")
 import flixel.sound.FlxSound;
-#else
-import flixel.system.FlxSound;
-#end
 
 import parse.*;
 import states.*;
@@ -527,14 +523,10 @@ class PlayState extends MusicBeatState
 	private function generateSong():Void
 	{
 		Conductor.mapBPMChanges(SONG);
-		Conductor.changeBPM(SONG.bpm);
+		Conductor.bpm = SONG.bpm;
 		Conductor.songPosition = 0;
 
-		if (SONG.needsVoices)
-			vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song), false);
-		else
-			vocals = new FlxSound();
-
+		vocals = (SONG.needsVoices) ? new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song), false) : new FlxSound();
 		FlxG.sound.list.add(vocals);
 
 		for (section in SONG.notes)
@@ -830,13 +822,13 @@ class PlayState extends MusicBeatState
 			persistentUpdate = false;
 			persistentDraw = true;
 
-			FlxTimer.globalManager.forEach(function(tmr:FlxTimer)
+			FlxTimer.globalManager.forEach((timer) ->
 			{
 				if (!tmr.finished)
 					tmr.active = false;
 			});
 
-			FlxTween.globalManager.forEach(function(twn:FlxTween)
+			FlxTween.globalManager.forEach((twn:FlxTween) ->
 			{
 				if (!twn.finished)
 					twn.active = false;

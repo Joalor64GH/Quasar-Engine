@@ -1,6 +1,5 @@
 package;
 
-import haxe.Timer;
 import openfl.Lib;
 import openfl.events.Event;
 import openfl.system.System;
@@ -21,32 +20,27 @@ class Overlay extends TextField
 		this.autoSize = LEFT;
 		this.selectable = false;
 		this.mouseEnabled = false;
-		this.defaultTextFormat = new TextFormat('_sans', 14, 0xFFFFFF);
-
-		addEventListener(Event.ENTER_FRAME, function(e:Event)
+		this.defaultTextFormat = new TextFormat(Paths.font('vcr.ttf'), 16, 0xFFFFFF);
+		addEventListener(Event.ENTER_FRAME, (e:Event) ->
 		{
-			var now = Timer.stamp();
+			final now = haxe.Timer.stamp();
 			times.push(now);
-			while (times[0] < now - 1)
-				times.shift();
+			while (times[0] < now - 1) times.shift();
 
 			var currentFrames:Int = times.length;
 			if (currentFrames > PreferencesData.framerate)
 				currentFrames = PreferencesData.framerate;
 
-			if (currentFrames <= PreferencesData.framerate / 4)
-				textColor = 0xFFFF0000;
-			else if (currentFrames <= PreferencesData.framerate / 2)
-				textColor = 0xFFFFFF00;
-			else
-				textColor = 0xFFFFFFFF;
+			textColor = (currentFrames <= PreferencesData.framerate / 4) ?
+				0xFFFF0000 : (currentFrames <= PreferencesData.framerate / 2) ?
+					0xFFFFFF00 : 0xFFFFFFFF;
 
 			var totalMemory:Float = System.totalMemory;
 			if (totalMemory > totalMemoryPeak)
 				totalMemoryPeak = totalMemory;
 
-			if (visible)
-				text = currentFrames + ' FPS\n' + CoolUtil.getInterval(totalMemory) + ' / ' + CoolUtil.getInterval(totalMemoryPeak) + '\n';
+			text = (visible) ? 
+				currentFrames + ' FPS\n' + CoolUtil.getInterval(totalMemory) + ' / ' + CoolUtil.getInterval(totalMemoryPeak) + '\n' : '';
 		});
 	}
 }

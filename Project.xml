@@ -39,11 +39,9 @@
 	<!-- _____________________________ Path Settings ____________________________ -->
 
 	<source name="source" />
-
-	<assets path="assets" exclude="*.mp3"/>
+	<assets path="assets" />
 
 	<assets path="mods" if="FUTURE_POLYMOD" />
-
 	<assets path="assets/videos" library="videos" if="FUTURE_VIDEO" />
 
 	<!-- _______________________________ Libraries ______________________________ -->

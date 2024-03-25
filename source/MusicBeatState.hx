@@ -31,15 +31,13 @@ class MusicBeatState extends FlxUIState
 			var cam:FlxCamera = new FlxCamera();
 			cam.bgColor.alpha = 0;
 			FlxG.cameras.add(cam, false);
-			cam.fade(FlxColor.BLACK, 0.7, true, function()
+			cam.fade(FlxColor.BLACK, 0.7, true, () ->
 			{
 				FlxTransitionableState.skipNextTransOut = false;
 			});
 		}
 		else
-		{
 			FlxTransitionableState.skipNextTransOut = false;
-		}
 	}
 
 	override function update(elapsed:Float)
@@ -71,10 +69,8 @@ class MusicBeatState extends FlxUIState
 			bpm: 0
 		}
 		for (i in 0...Conductor.bpmChangeMap.length)
-		{
 			if (Conductor.songPosition >= Conductor.bpmChangeMap[i].songTime)
 				lastChange = Conductor.bpmChangeMap[i];
-		}
 
 		curStep = lastChange.stepTime + Math.floor((Conductor.songPosition - lastChange.songTime) / Conductor.stepCrochet);
 	}
@@ -85,9 +81,7 @@ class MusicBeatState extends FlxUIState
 			beatHit();
 	}
 
-	public function beatHit():Void
-	{
-	}
+	public function beatHit():Void {}
 
 	public static function switchState(nextState:FlxState)
 	{
@@ -96,7 +90,7 @@ class MusicBeatState extends FlxUIState
 			var cam:FlxCamera = new FlxCamera();
 			cam.bgColor.alpha = 0;
 			FlxG.cameras.add(cam, false);
-			cam.fade(FlxColor.BLACK, 0.7, false, function()
+			cam.fade(FlxColor.BLACK, 0.7, false, () ->
 			{
 				FlxG.switchState(nextState);
 				FlxTransitionableState.skipNextTransIn = false;

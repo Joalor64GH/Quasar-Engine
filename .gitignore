@@ -1,5 +1,6 @@
 export/
 .vscode/
+.haxelib/
 source/APIStuff.hx
 !mods/introMod/
 .DS_STORE

@@ -91,7 +91,7 @@ class TitleState extends MusicBeatState
 		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
-			Conductor.changeBPM(102);
+			Conductor.bpm = 102;
 		}
 
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);

@@ -2,7 +2,7 @@ import('Paths');
 import('Conductor');
 import('flixel.FlxG');
 import('flixel.FlxSprite');
-import('flixel.system.FlxSound');
+import('flixel.sound.FlxSound');
 import('flixel.math.FlxMath');
 import('states.PlayState');
 

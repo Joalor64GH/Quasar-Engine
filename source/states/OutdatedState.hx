@@ -65,7 +65,7 @@ class OutdatedState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		if (controls.ACCEPT)
-			FlxG.openURL("https://github.com/Joalor64GH/ChainSaw-Engine-Personalized");
+			FlxG.openURL("https://github.com/Joalor64GH/Quasar-Engine");
 		else if (controls.BACK)
 		{
 			leftState = true;

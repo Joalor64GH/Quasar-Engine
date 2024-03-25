@@ -15,11 +15,7 @@ class OptionsState extends MusicBeatState
 {
 	public static var fromPause:Bool = false;
 
-	private final options:Array<String> = [
-		'Preferences',
-		'Controls',
-		'Exit'
-	];
+	final options:Array<String> = ['Preferences', 'Controls', 'Exit'];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var curSelected:Int = 0;
@@ -62,10 +58,8 @@ class OptionsState extends MusicBeatState
 
 		if (!selectedSomething)
 		{
-			if (controls.UI_UP_P)
-				changeSelection(-1);
-			else if (controls.UI_DOWN_P)
-				changeSelection(1);
+			if (controls.UI_UP_P || controls.UI_DOWN_P)
+				changeSelection(controls.UI_UP_P ? -1 : 1);
 			else if (FlxG.mouse.wheel != 0)
 				changeSelection(-FlxG.mouse.wheel);
 
@@ -128,22 +122,12 @@ class OptionsState extends MusicBeatState
 
 	private function changeSelection(change:Int = 0)
 	{
-		curSelected += change;
+		curSelected = FlxMath.wrap(curSelected + change, 0, options.length - 1);
 
-		if (curSelected < 0)
-			curSelected = options.length - 1;
-		else if (curSelected >= options.length)
-			curSelected = 0;
-
-		var bullShit:Int = 0;
-		for (item in grpOptions.members)
+		for (num => item in grpOptions.members)
 		{
-			item.targetY = bullShit - curSelected;
-			bullShit++;
-
-			item.alpha = 0.6;
-			if (item.targetY == 0)
-				item.alpha = 1;
+			item.targetY = num - curSelected;
+			item.alpha = (item.targetY == 0) ? 1 : 0.6;
 		}
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));

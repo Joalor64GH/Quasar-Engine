@@ -17,11 +17,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxGroup;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
-#if (flixel >= "5.3.0")
 import flixel.sound.FlxSound;
-#else
-import flixel.system.FlxSound;
-#end
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.ui.FlxSpriteButton;
@@ -127,7 +123,7 @@ class ChartingState extends MusicBeatState
 		updateGrid();
 
 		loadSong(_song.song);
-		Conductor.changeBPM(_song.bpm);
+		Conductor.bpm = _song.bpm;
 		Conductor.mapBPMChanges(_song);
 
 		bpmTxt = new FlxText(1000, 50, 0, "", 16);
@@ -401,7 +397,7 @@ class ChartingState extends MusicBeatState
 			{
 				tempBpm = nums.value;
 				Conductor.mapBPMChanges(_song);
-				Conductor.changeBPM(nums.value);
+				Conductor.bpm = nums.value;
 			}
 			else if (nums.name == 'note_susLength')
 			{
@@ -774,7 +770,7 @@ class ChartingState extends MusicBeatState
 		var sectionInfo:Array<Dynamic> = _song.notes[curSection].sectionNotes;
 
 		if (_song.notes[curSection].changeBPM && _song.notes[curSection].bpm > 0)
-			Conductor.changeBPM(_song.notes[curSection].bpm);
+			Conductor.bpm = _song.notes[curSection].bpm;
 		else
 		{
 			// get last bpm
@@ -782,7 +778,7 @@ class ChartingState extends MusicBeatState
 			for (i in 0...curSection)
 				if (_song.notes[i].changeBPM)
 					daBPM = _song.notes[i].bpm;
-			Conductor.changeBPM(daBPM);
+			Conductor.bpm = daBPM;
 		}
 
 		for (i in sectionInfo)
