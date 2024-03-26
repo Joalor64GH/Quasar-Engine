@@ -523,10 +523,14 @@ class PlayState extends MusicBeatState
 	private function generateSong():Void
 	{
 		Conductor.mapBPMChanges(SONG);
-		Conductor.bpm = SONG.bpm;
+		Conductor.changeBPM(SONG.bpm);
 		Conductor.songPosition = 0;
 
-		vocals = (SONG.needsVoices) ? new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song), false) : new FlxSound();
+		if (SONG.needsVoices)
+			vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song), false);
+		else
+			vocals = new FlxSound();
+
 		FlxG.sound.list.add(vocals);
 
 		for (section in SONG.notes)
@@ -822,13 +826,13 @@ class PlayState extends MusicBeatState
 			persistentUpdate = false;
 			persistentDraw = true;
 
-			FlxTimer.globalManager.forEach((timer) ->
+			FlxTimer.globalManager.forEach(function(tmr:FlxTimer)
 			{
 				if (!tmr.finished)
 					tmr.active = false;
 			});
 
-			FlxTween.globalManager.forEach((twn:FlxTween) ->
+			FlxTween.globalManager.forEach(function(twn:FlxTween)
 			{
 				if (!twn.finished)
 					twn.active = false;

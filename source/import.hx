@@ -29,6 +29,11 @@ import CoolUtil;
 import Controls;
 import Paths;
 
+import parse.Character;
+import parse.Stage;
+import parse.Week;
+import parse.StoryCharacter;
+
 using CoolUtil;
 using StringTools;
 #end
