@@ -6,7 +6,10 @@ import sys.FileSystem;
 
 import haxe.Json;
 
-import flixel.*;
+import flixel.FlxG;
+import flixel.FlxState;
+import flixel.FlxSprite;
+import flixel.FlxSubState;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
