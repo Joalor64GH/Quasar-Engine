@@ -8,7 +8,7 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import openfl.utils.Assets;
 
-import parse.*;
+import parse.Week;
 import states.*;
 
 typedef SongMetaData =

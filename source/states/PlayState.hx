@@ -525,7 +525,7 @@ class PlayState extends MusicBeatState
 	private function generateSong():Void
 	{
 		Conductor.mapBPMChanges(SONG);
-		Conductor.changeBPM(SONG.bpm);
+		Conductor.bpm = SONG.bpm;
 		Conductor.songPosition = 0;
 
 		if (SONG.needsVoices)
