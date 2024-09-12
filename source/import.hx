@@ -5,31 +5,36 @@ import sys.FileSystem;
 #end
 
 import haxe.Json;
-
-import flixel.FlxG;
-import flixel.FlxState;
-import flixel.FlxSprite;
-import flixel.FlxSubState;
-import flixel.math.FlxMath;
+import flixel.*;
+import flixel.util.*;
+import flixel.math.*;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.display.FlxGridOverlay;
+import flixel.graphics.frames.FlxAtlasFrames;
+import flixel.group.FlxGroup;
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.group.FlxSpriteGroup;
+import flixel.input.gamepad.FlxGamepadInputID;
+import flixel.input.gamepad.FlxGamepad;
+import flixel.input.keyboard.FlxKey;
+import flixel.sound.FlxSound;
+import flixel.ui.FlxButton;
 import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.group.FlxGroup.FlxTypedGroup;
+
+import states.PlayState;
+
+import core.*;
+import states.*;
+import substates.*;
 
 import Conductor;
+import Conductor.BPMChangeEvent;
 import DiscordClient;
 import PlayerSettings;
-import MusicBeatState;
-import MusicBeatSubstate;
-import Conductor.BPMChangeEvent;
-import states.PlayState;
-import parse.Song;
+
 import HighScore;
-import Alphabet;
-import CoolUtil;
-import Controls;
 import Paths;
 
 import parse.Character;
@@ -39,4 +44,7 @@ import parse.StoryCharacter;
 
 using CoolUtil;
 using StringTools;
+#if !debug
+@:noDebug
+#end
 #end
