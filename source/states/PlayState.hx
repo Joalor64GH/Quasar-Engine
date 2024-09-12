@@ -24,7 +24,6 @@ import states.*;
 import substates.*;
 
 import parse.Song;
-import parse.Character;
 import parse.Stage;
 
 #if sys
