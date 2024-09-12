@@ -50,6 +50,26 @@
         "type": "haxelib"
       },
       {
+        "name": "thx.core",
+        "type": "git",
+        "ref": "master",
+        "url": "https://github.com/fponticelli/thx.core.git"
+      },
+      {
+        "name": "thx.semver",
+        "type": "haxelib"
+      },
+      {
+        "name": "jsonpath",
+        "type": "git",
+        "ref": "main",
+        "url": "https://github.com/EliteMasterEric/jsonpath.git"
+      },
+      {
+        "name": "jsonpatch",
+        "type": "haxelib"
+      },
+      {
         "name": "discord_rpc",
         "type": "git",
         "dir": null,

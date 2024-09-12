@@ -53,7 +53,7 @@
 	<haxelib name="hxCodec" if="FUTURE_VIDEO" />
 	<haxelib name="hscript"/>
 	<haxelib name="discord_rpc" if="FUTURE_DISCORD_RCP" />
-	<haxelib name="polymod-joalor64" if="FUTURE_POLYMOD" />
+	<haxelib name="polymod" if="FUTURE_POLYMOD" />
 	<haxelib name="hxcpp-debug-server" if="desktop debug" />
 
 	<!-- ______________________________ Haxe Defines _____________________________ -->
