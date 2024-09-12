@@ -5,6 +5,7 @@ import sys.FileSystem;
 #end
 
 import haxe.Json;
+
 import flixel.*;
 import flixel.util.*;
 import flixel.math.*;
@@ -36,11 +37,6 @@ import PlayerSettings;
 
 import HighScore;
 import Paths;
-
-import parse.Character;
-import parse.Stage;
-import parse.Week;
-import parse.StoryCharacter;
 
 using CoolUtil;
 using StringTools;

@@ -20,7 +20,6 @@ import openfl.utils.Assets as OpenFlAssets;
 
 import flixel.sound.FlxSound;
 
-import parse.*;
 import states.*;
 import substates.*;
 
