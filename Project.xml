@@ -88,9 +88,11 @@
 			<haxedef name="HXCPP_CHECK_POINTER" />
 		</section>
 	</section>
-
-	<!-- Da Script Extension for Polymod -->
-	<haxedef name="POLYMOD_SCRIPT_EXT" value=".hx" />
+	
+	<section if="polymod">
+		<haxedef name="POLYMOD_DEBUG" value="true" if="debug" />
+		<haxedef name="POLYMOD_SCRIPT_EXT" value=".hx" /> <!-- Da Script Extension for Polymod -->
+	</section>
 
 	<!--The Name Says what will do-->
 	<haxedef name="no-deprecation-warnings" />

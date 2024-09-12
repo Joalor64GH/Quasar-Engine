@@ -24,6 +24,10 @@ import parse.*;
 import states.*;
 import substates.*;
 
+import parse.Song;
+import parse.Character;
+import parse.Stage;
+
 #if sys
 import sys.FileSystem;
 import sys.io.File;

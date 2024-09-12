@@ -49,16 +49,24 @@ class ModCore
 	#if FUTURE_POLYMOD
 	public static function loadMods(folders:Array<String>):Void
 	{
+		if (!FileSystem.exists(MOD_DIR))
+			FileSystem.createDirectory(MOD_DIR);
+		if (!FileSystem.exists(MOD_DIR + '/modpacks-go-here.txt'))
+			File.saveContent(MOD_DIR + '/modpacks-go-here.txt', '');
+		
 		var loadedModlist:Array<ModMetadata> = Polymod.init({
 			modRoot: MOD_DIR,
 			dirs: folders,
 			framework: OPENFL,
-			apiVersion: Lib.application.meta.get('version'),
+			apiVersionRule: Lib.application.meta.get('version'),
 			errorCallback: onError,
 			parseRules: getParseRules(),
 			extensionMap: extensions,
 			ignoredFiles: Polymod.getDefaultIgnoreList()
 		});
+
+		if (loadedModlist == null)
+			return;
 
 		trace('Loading Successful, ${loadedModlist.length} / ${folders.length} new mods.');
 
@@ -80,36 +88,45 @@ class ModCore
 
 		trace('Searching for Mods...');
 
-		for (i in Polymod.scan(MOD_DIR, '*.*.*', onError))
+		for (i in Polymod.scan({modRoot: MOD_DIR, apiVersionRule: API_VERSION, errorCallback: onError})) 
 		{
 			trackedMods.push(i);
 			if (!FlxG.save.data.disabledMods.contains(i.id))
 				daList.push(i.id);
 		}
 
-		trace('Found ${daList.length} new mods.');
+		if (daList != null && daList.length > 0)
+			trace('Found ${daList.length} new mods.');
 
-		return daList;
+		return daList != null && daList.length > 0 ? daList : [];
 	}
 
 	public static function getParseRules():ParseRules
 	{
-		var output:ParseRules = ParseRules.getDefault();
+		final output:ParseRules = ParseRules.getDefault();
 		output.addType("txt", TextFileFormat.LINES);
 		output.addType("hx", TextFileFormat.PLAINTEXT);
-		return output;
+		return output != null ? output : null;
 	}
 
 	static function onError(error:PolymodError):Void
 	{
-		switch (error.severity)
-		{
-			case NOTICE:
+		switch (error.code) {
+			case MOD_LOAD_PREPARE:
 				trace(error.message);
-			case WARNING:
+			case MOD_LOAD_DONE:
 				trace(error.message);
-			case ERROR:
+			case MISSING_ICON:
 				trace(error.message);
+			default:
+				switch (error.severity) {
+					case NOTICE:
+						trace(error.message);
+					case WARNING:
+						trace(error.message);
+					case ERROR:
+						trace(error.message);
+				}
 		}
 	}
 	#end

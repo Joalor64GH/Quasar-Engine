@@ -63,7 +63,6 @@ class ModsMenuState extends MusicBeatState
 		description.setFormat(Paths.font("vcr.ttf"), 28, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		description.screenCenter(X);
 		description.scrollFactor.set();
-		description.borderSize = 3;
 		add(description);
 
 		changeSelection();
@@ -84,7 +83,7 @@ class ModsMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			ModCore.reload();
-			ModsMenuState.mustResetMusic = true;
+			mustResetMusic = true;
 			MusicBeatState.switchState(new MainMenuState());
 		}
 		else if (controls.ACCEPT)
@@ -137,7 +136,10 @@ class ModsMenuState extends MusicBeatState
 
 		if (ModCore.trackedMods[curSelected].description != null)
 		{
-			description.text = ModCore.trackedMods[curSelected].description;
+			@:privateAccess
+			description.text = ModCore.trackedMods[curSelected].description + "\nAuthor: " + ModCore.trackedMods[curSelected]._author 
+				+ "\nAPI Version: " + ModCore.trackedMods[curSelected].apiVersion + "\nMod Version: " 
+				+ ModCore.trackedMods[curSelected].modVersion;
 			description.screenCenter(X);
 		}
 	}
@@ -151,7 +153,16 @@ class ModIcon extends FlxSprite
 	{
 		super();
 
-		loadGraphic(BitmapData.fromBytes(bytes));
+		if (bytes != null && bytes.length > 0) {
+			try {
+				loadGraphic(BitmapData.fromBytes(bytes));
+			} catch (e:Dynamic) {
+				FlxG.log.error(e);
+				loadGraphic(Paths.image('unknownMod'));
+			}
+		} else
+			loadGraphic(Paths.image('unknownMod'));
+
 		setGraphicSize(150, 150);
 		updateHitbox();
 		scrollFactor.set();
