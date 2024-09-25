@@ -41,6 +41,8 @@
 	<assets path="mods" if="FUTURE_POLYMOD" />
 	<assets path="assets/videos" library="videos" if="FUTURE_VIDEO" />
 
+	<assets path="alsoft.ini" />
+
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
