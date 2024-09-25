@@ -108,4 +108,11 @@
 	
 	<icon path="icon.png" />
 
+	<target id="haxe" tool="linker" if="linux">
+		<lib name="/usr/lib64/libX11.so" if="HXCPP_M64" /> <!-- linux support -->
+	</target> 
+	<target id="haxe" tool="linker" if="macos">
+		<lib name="/lib64/libX11.a" if="HXCPP_M64" /> <!-- mac support -->
+	</target>
+
 </project>
