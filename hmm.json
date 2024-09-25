@@ -63,7 +63,7 @@
         "type": "haxelib"
       },
       {
-        "name": "discord_rpc",
+        "name": "linc_discord-rpc",
         "type": "git",
         "dir": null,
         "ref": "master",
