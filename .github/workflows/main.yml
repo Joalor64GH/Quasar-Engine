@@ -18,9 +18,9 @@ jobs:
         uses: actions/cache/restore@main
         with:
           path: |
-            .haxelib
-            export/debug/windows/haxe
-            export/debug/windows/obj
+            .haxelib/
+            export/nightly/windows/haxe/
+            export/nightly/windows/obj/
           key: cache-windows-build
 
       - name: Set Cache Status
@@ -34,7 +34,7 @@ jobs:
         run: echo "${{github.run_id}}" > VERSION
 
       - name: Compile
-        run: haxelib run lime build windows -debug
+        run: haxelib run lime build windows -Dnightly
 
       - name: Clear Previous Cache
         uses: actions/github-script@main
@@ -46,13 +46,13 @@ jobs:
         uses: actions/cache/save@main
         with:
           path: |
-            .haxelib
-            export/debug/windows/haxe
-            export/debug/windows/obj
+            .haxelib/
+            export/nightly/windows/haxe/
+            export/nightly/windows/obj/
           key: cache-windows-build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main
         with:
           name: windowsBuild
-          path: export/debug/windows/bin
+          path: export/nightly/windows/bin
