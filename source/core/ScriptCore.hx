@@ -1,10 +1,8 @@
 package core;
 
-import hscript.Interp;
-import hscript.Parser;
+import hscript.*;
 import openfl.Lib;
 import openfl.utils.Assets;
-import flixel.FlxBasic;
 import states.ScriptState;
 import substates.ScriptSubState;
 
@@ -21,6 +19,15 @@ class ScriptCore extends FlxBasic
 
 	private var parser:Parser;
 	private var interp:Interp;
+
+	// might be useless but anyways
+	public static var classesMap:Map<String, Dynamic> = [
+		'Controls' => Controls,
+		'CoolUtil' => CoolUtil,
+		'DialogueBox' => DialogueBox,
+		'MusicBeatState' => MusicBeatState,
+		'MusicBeatSubstate' => MusicBeatSubstate
+	];
 
 	public function new(file:String, ?execute:Bool = true)
 	{
@@ -82,6 +89,9 @@ class ScriptCore extends FlxBasic
 
 		setVariable('ScriptState', ScriptState);
 		setVariable('ScriptSubState', ScriptSubState);
+
+		for (key => value in classesMap)
+			setVariable(key, value);
 
 		if (execute)
 			this.execute(file);

@@ -6,6 +6,7 @@ import openfl.utils.Assets;
 
 using StringTools;
 
+@:keep
 class CoolUtil
 {
 	public static var difficultyArray:Array<Dynamic> = [
@@ -54,4 +55,8 @@ class CoolUtil
 
 	public static inline function truncateFloat(number:Float, precision:Int):Float
 		return FlxMath.roundDecimal(number, precision);
+}
+
+class MapUtil {
+	public static function hasKey<K, V>(map:Map<K,V>, key:K):Bool return map[key] != null;
 }

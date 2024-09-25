@@ -36,6 +36,7 @@ import HighScore;
 import Paths;
 
 using CoolUtil;
+using CoolUtil.MapUtil;
 using StringTools;
 #if !debug
 @:noDebug
