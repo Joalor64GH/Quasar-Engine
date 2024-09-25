@@ -26,7 +26,8 @@ class ScriptCore extends FlxBasic
 		'CoolUtil' => CoolUtil,
 		'DialogueBox' => DialogueBox,
 		'MusicBeatState' => MusicBeatState,
-		'MusicBeatSubstate' => MusicBeatSubstate
+		'MusicBeatSubstate' => MusicBeatSubstate,
+		'FlxSprite' => FlxSprite
 	];
 
 	public function new(file:String, ?execute:Bool = true)
