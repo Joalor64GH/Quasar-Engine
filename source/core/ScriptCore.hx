@@ -24,10 +24,9 @@ class ScriptCore extends FlxBasic
 	public static var classesMap:Map<String, Dynamic> = [
 		'Controls' => Controls,
 		'CoolUtil' => CoolUtil,
-		'DialogueBox' => DialogueBox,
+		'DialogueBox' => DialogueBox, // mostly to prevent a random crash in week 6
 		'MusicBeatState' => MusicBeatState,
-		'MusicBeatSubstate' => MusicBeatSubstate,
-		'FlxSprite' => FlxSprite
+		'MusicBeatSubstate' => MusicBeatSubstate
 	];
 
 	public function new(file:String, ?execute:Bool = true)

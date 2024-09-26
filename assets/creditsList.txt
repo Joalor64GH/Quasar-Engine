@@ -1,5 +1,5 @@
 Joalor64 YT:Main Programmer
 PolybiusProxy:MP4 Video Support
-MAJigsaw77:Original Programmer of Chain Saw Engine
+MAJigsaw77:Original Programmer of Chain Saw Engine + hxvlc
 Lars Doucet:Polymod
 Ninjamuffin99:Base Game

@@ -37,6 +37,14 @@ class TitleState extends MusicBeatState
 		PreferencesData.load();
 		HighScore.load();
 
+		#if (hxvlc)
+		#if (hxvlc < "1.4.1")
+		hxvlc.libvlc.Handle.init();
+		#else
+		hxvlc.util.Handle.init();
+		#end
+		#end
+
 		if (PreferencesData.checkForUpdates && !OutdatedState.leftState)
 			OutdatedState.checkForUpdates();
 
