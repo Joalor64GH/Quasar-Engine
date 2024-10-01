@@ -46,18 +46,19 @@ jobs:
         with:
           script: await require('./actions/cache/clear-cache.js')({github, context}, 'cache-windows-build');
 
-      - name: Save Current Cache
-        id: cache-build-save
-        uses: actions/cache/save@main
-        with:
-          path: |
-            .haxelib/
-            export/nightly/windows/haxe/
-            export/nightly/windows/obj/
-          key: cache-windows-build
-
       - name: Upload Artifact
         uses: actions/upload-artifact@main
         with:
           name: windowsBuild
           path: export/nightly/windows/bin
+
+      - name: Save Current Cache
+        uses: actions/cache@main
+        with:
+          key: cache-windows-build
+          path: |
+            .haxelib/
+            export/debug/windows/haxe/
+            export/debug/windows/obj/
+          restore-keys: |
+            cache-windows-build
